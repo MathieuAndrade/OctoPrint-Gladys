@@ -30,10 +30,10 @@ class GladysPlugin(octoprint.plugin.TemplatePlugin,
 		self._wait_for_timelapse_timer = None
 
         def initialize(self):
-                self.address = self._settings.get_string(["address"])
+                self.address = self._settings.get(["address"])
                 self._logger.debug("address: %s" % self.address)
                 
-                self.token = self._settings.get_string(["token"])
+                self.token = self._settings.get(["token"])
                 self._logger.debug("token: %s" % self.token)
 
                 self.abortTimeout = self._settings.get_int(["abortTimeout"])
@@ -180,8 +180,8 @@ class GladysPlugin(octoprint.plugin.TemplatePlugin,
         def on_settings_save(self, data):
                 octoprint.plugin.SettingsPlugin.on_settings_save(self, data)
         
-                self.abortTimeout = self._settings.get_string(["address"])
-                self.abortTimeout = self._settings.get_string(["token"])
+                self.abortTimeout = self._settings.get(["address"])
+                self.abortTimeout = self._settings.get(["token"])
                 self.abortTimeout = self._settings.get_int(["abortTimeout"])
                 self.rememberCheckBox = self._settings.get_boolean(["rememberCheckBox"])
                 self.abortTimeout = self._settings.get_int(["plug"])
