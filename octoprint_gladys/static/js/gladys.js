@@ -1,5 +1,5 @@
 $(function() {
-    function AutomaticShutdownViewModel(parameters) {
+    function GladysViewModel(parameters) {
         var self = this;
 
         self.loginState = parameters[0];
@@ -102,7 +102,7 @@ $(function() {
     }
 
     OCTOPRINT_VIEWMODELS.push([
-        AutomaticShutdownViewModel,
+        GladysViewModel,
         ["loginStateViewModel"],
         document.getElementById("sidebar_plugin_automaticshutdown")
     ]);

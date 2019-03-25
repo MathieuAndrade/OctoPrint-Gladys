@@ -51,7 +51,7 @@ class GladysPlugin(octoprint.plugin.TemplatePlugin,
                         self._automatic_shutdown_enabled = self.lastCheckBoxValue
                 
 	def get_assets(self):
-		return dict(js=["js/automaticshutdown.js"])            
+		return dict(js=["js/gladys.js"])            
 
 	def get_api_commands(self):
 		return dict(enable=[],
