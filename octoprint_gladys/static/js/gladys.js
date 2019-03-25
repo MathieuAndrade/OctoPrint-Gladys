@@ -103,7 +103,6 @@ $(function() {
 
     OCTOPRINT_VIEWMODELS.push([
         GladysViewModel,
-        ["loginStateViewModel"],
-        document.getElementById("sidebar_plugin_automaticshutdown")
+        ["loginStateViewModel"]
     ]);
 });
