@@ -4,23 +4,31 @@
     <div class="control-group">
         <label class="control-label">Gladys IP address</label>
         <div class="controls">
-            <input type="text" class="input text-right" data-bind="address: settings.plugins.gladys.address">
+            <input type="text" class="input" data-bind="address: settings.plugins.gladys.address">
             <div class="help-block">Exemple: http://192.168.1.30:8080</div>
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label">Gladys IP token</label>
+        <label class="control-label">Gladys token</label>
         <div class="controls">
-            <input type="text" class="input-block text-right" data-bind="token: settings.plugins.gladys.token">
+            <input type="text" class="input-block" data-bind="token: settings.plugins.gladys.token">
             <div class="help-block">Exemple: tjfd5f26d96f6d3skfoog6A9f6f5</div>
         </div>
     </div>
-    <h4>Automatic Shutdown</h4>
+
+    <h4>Automatic Shutdown a plug</h4>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: settings.plugins.gladys.automaticShutdownEnabled"> Remember the value of "Shutdown after print finishes"
+            </label>
+        </div>
+    </div>
     <div class="control-group">
         <label class="control-label">Abort Timeout</label>
         <div class="controls">
             <div class="input-append">
-                <input type="number" class="input-mini text-right" data-bind="value: settings.plugins.gladys.abortTimeout">
+                <input type="number" class="input-mini" data-bind="value: settings.plugins.gladys.abortTimeout">
                 <span class="add-on">sec</span>
             </div>
         </div>
@@ -35,7 +43,7 @@
         <div class="control-group">
         <label class="control-label">Plug ID</label>
         <div class="controls">
-            <input type="number" class="input-mini text-right" data-bind="plug: settings.plugins.gladys.plug">
+            <input type="number" class="input-mini" data-bind="plug: settings.plugins.gladys.plug">
             <div class="help-block">The id of your plug to turn off in Gladys Assistant</div>
         </div>
     </div>
